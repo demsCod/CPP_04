@@ -22,3 +22,9 @@ WrongCat::WrongCat(const WrongCat &other)
 {
 	*this = other;
 }
+
+
+WrongCat::~WrongCat(){
+
+	std::cout << type << " destroy" << std::endl;
+}

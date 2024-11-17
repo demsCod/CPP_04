@@ -10,7 +10,9 @@ WrongAnimal ::WrongAnimal()
 
 
 WrongAnimal :: ~WrongAnimal()
-{}
+{
+	std::cout << type << " destroy" << std::endl;
+}
 
 WrongAnimal :: WrongAnimal(std::string t)
 {

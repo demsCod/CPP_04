@@ -8,6 +8,8 @@ void Dog::makeSound() const
 Dog::Dog()
 	: Animal("Dog")
 {
+	std::cout << type << " is created" <<std::endl;
+
 	type = "Dog";
 }
 
@@ -22,5 +24,12 @@ Dog& Dog::operator=(const Dog &other)
 
 Dog::Dog(const Dog &other)
 {
+	std::cout << type << " is created" <<std::endl;
+
 	*this = other;
+}
+
+Dog::~Dog()
+{
+	std::cout << type << " destroy" << std::endl;
 }

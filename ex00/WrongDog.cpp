@@ -22,3 +22,10 @@ WrongDog::WrongDog(const WrongDog &other)
 {
 	*this = other;
 }
+
+
+
+WrongDog::~WrongDog(){
+
+	std::cout << type << " destroy" << std::endl;
+}

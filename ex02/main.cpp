@@ -3,6 +3,8 @@
 #include "Animal.hpp"
 int main()
 {
+
+//   const Animal jo;
   std::cout << "-------------------[Mandatory tests 0]----------------------" << std::endl;
   const Animal* j = new Dog();
   const Animal* i = new Cat();

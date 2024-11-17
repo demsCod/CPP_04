@@ -12,7 +12,9 @@ Animal ::Animal()
 
 
 Animal :: ~Animal()
-{}
+{
+
+}
 
 Animal :: Animal(std::string t)
 {
@@ -22,4 +24,14 @@ Animal :: Animal(std::string t)
 void Animal :: makeSound() const
 {
 	std :: cout << "* ANIMAL SOUND *" << std::endl; 
+}
+
+
+Animal& Animal::operator=(const Animal &other)
+{
+	if (this != &other)
+	{
+		type = other.type;
+	}
+	return (*this);
 }

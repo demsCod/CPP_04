@@ -8,6 +8,8 @@ void Cat::makeSound() const
 Cat::Cat()
 	: Animal("Cat")
 {
+	std::cout << type << " is created" <<std::endl;
+
 	type = "Cat";
 }
 Cat &Cat::operator=(const Cat &other)
@@ -21,5 +23,13 @@ Cat &Cat::operator=(const Cat &other)
 
 Cat::Cat(const Cat &other)
 {
+	std::cout << type << " is created" <<std::endl;
+
 	*this = other;
+}
+
+
+Cat::~Cat()
+{
+	std::cout << type << " destroy" << std::endl;
 }
