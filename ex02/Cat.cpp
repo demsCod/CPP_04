@@ -18,6 +18,8 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		type = other.type;
+		for (int i = 0, i < 100, i++)
+			Brain::ideas[i] = 
 	}
 	return (*this);
 }
