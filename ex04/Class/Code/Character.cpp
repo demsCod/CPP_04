@@ -1,4 +1,4 @@
-#include "Character.hpp"
+#include "../Header/Character.hpp"
 
 
 void Character::equip(AMateria *m)
@@ -35,7 +35,7 @@ void Character::unequip(int idx)
 }
 
 
-std::string&Character ::GetName()
+std::string const &Character ::getName() const
 {
 	return _name;
 }
@@ -47,7 +47,7 @@ const AMateria *Character ::GetStuff() const
 	return * _stuff;
 }
 
-void Character::use(int idx, Character &target)
+void Character::use(int idx, ICharacter &target)
 {
 	if (_stuff[idx])
 		_stuff[idx]->use(target);
@@ -61,6 +61,8 @@ Character::Character(const std::string name) : ICharacter()
 		_stash[i] = NULL;
 	_name = name;
 }
+
+
 
 
 Character::Character(const Character& other) : ICharacter()
@@ -82,5 +84,5 @@ Character::Character(const Character& other) : ICharacter()
 
 Character::~Character()
 {
-	delete [] _stash;
+	delete [] *_stash;
 }

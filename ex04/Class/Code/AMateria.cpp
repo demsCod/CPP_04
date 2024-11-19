@@ -38,9 +38,6 @@ AMateria& AMateria::operator=(AMateria const& other)
 
 void AMateria::use(ICharacter& target)
 {
-	if (_type == "ice")
-		std::cout << "Ice : " << "''* shoots an ice bolt at " << target.getName() << " *''" << std::endl;
-	else if (_type == "cure")
-		std::cout << "Cure : ''* heals " << target.getName() << "'s wounds *''"<< std::endl;
+	(void)target;
 	return ;
 }
