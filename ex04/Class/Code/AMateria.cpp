@@ -2,14 +2,10 @@
 
 #include "../Header/AMateria.hpp"
 
-// 		AMateria(AMateria const& other);
-
-// 		// [...] 
-// 		//
 
 AMateria::AMateria(std::string const& type)
 {
-	std::cout << type <<  "Materia has been created\n";
+	std::cout << type <<  " Materia has been created\n";
 	_type = type;
 }
 
