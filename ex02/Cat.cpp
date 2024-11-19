@@ -19,7 +19,7 @@ Cat &Cat::operator=(const Cat &other)
 	{
 		type = other.type;
 		for (int i = 0, i < 100, i++)
-			Brain::ideas[i] = 
+			Brain::ideas[i] =  
 	}
 	return (*this);
 }

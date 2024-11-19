@@ -33,3 +33,13 @@ Dog::~Dog()
 	std ::cout << type << " destroy" << std::endl;
 	delete _brain;
 }
+
+
+const std::string& Dog::GetIdeas(int index)
+{
+	return (this->_brain->GetIdeas(index));
+}
+void Dog::SetIdeas(std::string ideas,  int index)
+{
+	this->_brain->SetIdeas(ideas, index);
+}

@@ -18,6 +18,7 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		type = other.type;
+		this->_brain = new Brain(*other._brain);
 	}
 	return (*this);
 }
@@ -28,6 +29,17 @@ Cat::Cat(const Cat &other)
 
 	*this = other;
 }
+
+const std::string& Cat::GetIdeas(int index)
+{
+	return (this->_brain->GetIdeas(index));
+}
+void Cat::SetIdeas(std::string ideas,  int index)
+{
+	this->_brain->SetIdeas(ideas, index);
+}
+
+
 
 Cat::~Cat()
 {
