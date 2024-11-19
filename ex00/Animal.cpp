@@ -7,13 +7,18 @@ const std::string&  Animal::getType() const
 {
 	return type;
 }
-Animal ::Animal()
-{type = "not typed";}
+Animal ::Animal(){
+
+	std :: cout << "Animal has been created" << std::endl; 
+	type = "not typed";
+	
+}
 
 
 Animal :: ~Animal()
 {
-
+	std :: cout << "Animal is destroyed" << std::endl; 
+	
 }
 
 Animal :: Animal(std::string t)

@@ -23,15 +23,16 @@ Cat &Cat::operator=(const Cat &other)
 	return (*this);
 }
 
-Cat::Cat(const Cat &other)
+Cat::Cat(const Cat &other) : Animal("Cat")
 {
 	std::cout << type << " is created" <<std::endl;
 
 	*this = other;
 }
 
-const std::string& Cat::GetIdeas(int index)
+std::string Cat :: GetIdeas(int index) 
 {
+	if (index > 99 || index < 0 ) index = 0;
 	return (this->_brain->GetIdeas(index));
 }
 void Cat::SetIdeas(std::string ideas,  int index)

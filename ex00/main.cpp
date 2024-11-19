@@ -19,6 +19,7 @@ int	main(void)
 	std::cout << i->getType() << " " << std::endl;
 	std::cout << swap->getType() << " \n";
 
+	
 	swap->makeSound();   //will output the dog sound!
 	i->makeSound(); //will output the cat sound!
 	j->makeSound(); //will output the dog sound!

@@ -3,7 +3,7 @@
 
 void Brain::SetIdeas(std:: string& id, int index)
 {
-	if (index <  100)
+	if (index <  100 && index > -1)
 		ideas[index] = id;
 	else
 		{std::cout  << "dont have enought place to set ideas!"; return ; }
@@ -11,6 +11,8 @@ void Brain::SetIdeas(std:: string& id, int index)
 
 Brain::Brain()
 {
+	for (int i = 0; i < 100; i++)
+		ideas[i] = "...";
 	std::cout << "brain has created" << std::endl;
 }
 
@@ -36,9 +38,10 @@ Brain::~Brain()
 
 
 
-const std::string& Brain::GetIdeas(int index) const 
+std::string Brain::GetIdeas(int index) const 
 {
-	if (index < 100)
-		return (this->ideas[index]);
-	return (NULL);
+	if (index < 0 || index > 99)
+    	return NULL;
+	return (ideas[index]);
+	
 }

@@ -9,7 +9,7 @@ class Brain
 	 	Brain();
         ~Brain();
 		void SetIdeas(std:: string& ideas, int index);
-		const std::string& GetIdeas(int index) const;
+		std::string GetIdeas(int index) const;
 		Brain(Brain const &copy);
         Brain& operator=(Brain const &affect);
 

@@ -17,11 +17,12 @@ Dog& Dog::operator=(const Dog &other)
 	if (this != &other)
 	{
 		type = other.type;
+		this->_brain = new Brain(*other._brain);
 	}
 	return (*this);
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal("Dog")
 {
 	std::cout << type << " is created" <<std::endl;
 
@@ -34,12 +35,14 @@ Dog::~Dog()
 	delete _brain;
 }
 
-
-const std::string& Dog::GetIdeas(int index)
+std::string Dog::GetIdeas(int index) const
 {
-	return (this->_brain->GetIdeas(index));
+	if (index > 99 || index < 0 ) 
+		index = 0;
+	return (_brain->GetIdeas(index));
 }
+
 void Dog::SetIdeas(std::string ideas,  int index)
 {
-	this->_brain->SetIdeas(ideas, index);
+	_brain->SetIdeas(ideas, index);
 }

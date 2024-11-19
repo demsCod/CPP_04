@@ -18,18 +18,29 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		type = other.type;
-		for (int i = 0, i < 100, i++)
-			Brain::ideas[i] =  
+		this->_brain = new Brain(*other._brain);
 	}
 	return (*this);
 }
 
-Cat::Cat(const Cat &other)
+Cat::Cat(const Cat &other) : Animal("Cat")
 {
 	std::cout << type << " is created" <<std::endl;
 
 	*this = other;
 }
+
+std::string Cat :: GetIdeas(int index) 
+{
+	if (index > 99 || index < 0 ) index = 0;
+	return (this->_brain->GetIdeas(index));
+}
+void Cat::SetIdeas(std::string ideas,  int index)
+{
+	this->_brain->SetIdeas(ideas, index);
+}
+
+
 
 Cat::~Cat()
 {
