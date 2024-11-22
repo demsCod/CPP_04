@@ -17,11 +17,12 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		type = other.type;
+		std::cout << "Cat was copyed with success" << std::endl;
 	}
 	return (*this);
 }
 
-Cat::Cat(const Cat &other)
+Cat::Cat(const Cat &other)  : Animal("cat")
 {
 	std::cout << type << " is created" <<std::endl;
 

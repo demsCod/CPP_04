@@ -14,11 +14,13 @@ WrongCat &WrongCat::operator=(const WrongCat &other)
 	if (this != &other)
 	{
 		type = other.type;
+		std::cout << "WrongCat was copyed with success" << std::endl;
+
 	}
 	return (*this);
 }
 
-WrongCat::WrongCat(const WrongCat &other)
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal("WrongCat")
 {
 	*this = other;
 }

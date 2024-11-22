@@ -24,5 +24,12 @@ int	main(void)
 	i->makeSound(); //will output the cat sound!
 	j->makeSound(); //will output the dog sound!
 	meta->makeSound();
+
+	delete meta;
+	delete j;
+	delete i;
+	delete faux;
+	delete fake;
+
 	return (0);
 }

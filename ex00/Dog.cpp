@@ -18,11 +18,12 @@ Dog& Dog::operator=(const Dog &other)
 	if (this != &other)
 	{
 		type = other.type;
+		std::cout << "Dog was copyed with success" << std::endl;
 	}
 	return (*this);
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal("Dog")
 {
 	std::cout << type << " is created" <<std::endl;
 
